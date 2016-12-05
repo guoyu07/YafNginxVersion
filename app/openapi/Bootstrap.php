@@ -25,15 +25,6 @@ class Bootstrap extends Yaf_Bootstrap_Abstract {
                  'action' => 'index'
              )   
         ); 
-        
-        $mainRoute = new Yaf_Route_Regex(
-            '#^\/api\/main\/index/?\??(.*)#',
-            array(
-                'controller' => 'Main',
-                'action' => 'index'
-            )
-        );
-        
         $indexRoute = new Yaf_Route_Regex(
             '#^\/([0-9a-zA-Z]+)/?$#',
             array(
@@ -44,7 +35,13 @@ class Bootstrap extends Yaf_Bootstrap_Abstract {
                 1 => 'url',
             )   
         );
-    
+        $mainRoute = new Yaf_Route_Regex(
+            '#^\/api\/main\/index/?\??(.*)#',
+            array(
+                'controller' => 'Main',
+                'action' => 'index'
+            )
+        );
         $shortenRoute = new Yaf_Route_Regex(
             '#^\/api\/short\/shorten/?\??(.*)#',
             array(
@@ -52,7 +49,6 @@ class Bootstrap extends Yaf_Bootstrap_Abstract {
                 'action' => 'shorten'
             )
         );
-
         $expandRoute = new Yaf_Route_Regex(
             '#^\/api\/short\/expand/?\??(.*)#',
             array(

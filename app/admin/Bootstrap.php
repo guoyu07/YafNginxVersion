@@ -51,7 +51,6 @@ class Bootstrap extends Yaf_Bootstrap_Abstract {
         );
 
         $router->addRoute('indexRoute', $indexRoute); 
-        $router->addRoute('shortRoute', $shortRoute);
         $router->addRoute('loginRoute', $loginRoute);
         $router->addRoute('doLoginRoute', $doLoginRoute);
     }
@@ -76,8 +75,6 @@ class Bootstrap extends Yaf_Bootstrap_Abstract {
 
         //禁止ap自动渲染模板
         $dispatcher->disableView();
-        
-        
     }
 
     /**
@@ -96,4 +93,3 @@ class Bootstrap extends Yaf_Bootstrap_Abstract {
     }
 }
 
-/* vim: set expandtab ts=4 sw=4 sts=4 tw=100: */

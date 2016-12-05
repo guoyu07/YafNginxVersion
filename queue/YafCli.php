@@ -8,5 +8,3 @@ $daoShortUrl = new Dao_ShortUrl();
 $url = $daoShortUrl->getLongUrlById($id);
 
 var_dump($url);
-
-
